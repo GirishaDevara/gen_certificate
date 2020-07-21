@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQSjWoeOIOjoHP3oQBIX6CvXt2C9gM_ZmQKyXxtBdD-fZJ7JOtu&usqp=CAU" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form method="post">
+      {% csrf_token %}
+      <input type="text" id="login" class="fadeIn second" name="email" placeholder="Email Id">
+      <input type="text" id="name" class="fadeIn third" name="name" placeholder="Name">
+      <input type="submit" class="fadeIn fourth" value="Get certificate">
+    </form>
+    <div id="formFooter">
+<!--      <a class="underlineHover" href="#">Forgot Password?</a>-->
+    </div>
+
+  </div>
+</div>
+{% endblock %}
